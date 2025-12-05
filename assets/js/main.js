@@ -56,16 +56,17 @@
   /**
    * Preloader
    */
-  
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const preloader = document.querySelector("#preloader");
 
-    window.addEventListener("load", function () {
+    // عرض البريلودر لمدة 3 ثواني
+    setTimeout(() => {
         preloader.style.opacity = "0";
+
         setTimeout(() => {
             preloader.style.display = "none";
         }, 600); // نفس مدة الـ transition في CSS
-    });
+    }, 3000); // مدة البريلودر (3 ثواني)
 });
 
 
