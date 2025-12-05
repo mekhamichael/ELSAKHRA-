@@ -56,19 +56,23 @@
   /**
    * Preloader
    */
+/**
+ * Preloader (3 ثواني فقط)
+ */
 document.addEventListener("DOMContentLoaded", function () {
     const preloader = document.querySelector("#preloader");
 
-    // عرض البريلودر لمدة 3 ثواني
+    // إظهار الصفحة فورًا
+    document.body.style.visibility = "visible";
+
+    // إزالة البريلودر بعد 3 ثواني
     setTimeout(() => {
         preloader.style.opacity = "0";
-
         setTimeout(() => {
             preloader.style.display = "none";
-        }, 600); // نفس مدة الـ transition في CSS
-    }, 3000); // مدة البريلودر (3 ثواني)
+        }, 600);
+    }, 300);
 });
-
 
   /**
    * Scroll top button

@@ -54,6 +54,8 @@ body {
   background-color: var(--background-color);
   font-family: var(--default-font);
   text-transform: capitalize !important;
+      visibility: hidden;
+
 }
 img{
   border-radius: 15px;
