@@ -1,0 +1,32 @@
+#  تفعيل الكاش للملفات الثابتة
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # الصور
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+
+    # الخطوط
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/ttf "access plus 1 year"
+
+    # CSS و JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+
+    # صفحات HTML (يمكن تعديل الفترة حسب التحديثات المتكررة)
+    ExpiresByType text/html "access plus 1 week"
+
+    # الافتراضي
+    ExpiresDefault "access plus 1 week"
+</IfModule>
+
+#  تفعيل ضغط GZIP لتسريع التحميل
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json application/xml
+</IfModule>
